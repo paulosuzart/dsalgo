@@ -1,10 +1,13 @@
 package skiena.three;
 
 /**
- * Warn: Class for simple test and study. Calling successive {@code check} may cause changes
+ * Warn: Class for simple test and study. Calling successive {@code check(string)} may cause changes
  * to {@code Explanation}. Therefore, not thread safe.
  *
- * Question 3.1
+ * The {@code enum Explanation} can be replaced by something else for testing purposes for sure.
+ * But for study intention, it's fine.
+ *
+ * Question 3.1 - Given a string, validate if the parenthesis are balanced or not.
  */
 public class ParenthesisBalancer {
 
