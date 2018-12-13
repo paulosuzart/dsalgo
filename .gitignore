@@ -1,0 +1,17 @@
+# Gradle
+build
+.gradle
+
+# NodeJS
+node_modules
+.tmp
+
+# IntelliJ IDEA
+.idea
+*.iml
+out
+.classpath
+.settings/
+.project
+bin/
+logs/
