@@ -47,7 +47,7 @@ public class LinkedListReverse {
 
   /**
    * This is the recursive solution implemented with the help of @buraktutanlar
-   *
+   * @param head the head of the list to be reversed
    * @return the reversed this
    */
   static Node recursiveReverse(Node head) {
@@ -58,7 +58,7 @@ public class LinkedListReverse {
 
   /**
    * Non recursive solution
-   *
+   * @param head the head of the list to be reversed
    * @return returns the reversed list
    */
   static Node reverse(Node head) {
