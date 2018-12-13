@@ -1,3 +1,5 @@
+package codewards;
+
 public class BitCounting {
 
   public static int countBits(int n) {

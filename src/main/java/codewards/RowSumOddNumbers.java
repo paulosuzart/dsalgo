@@ -1,3 +1,5 @@
+package codewards;
+
 import java.util.stream.IntStream;
 
 public class RowSumOddNumbers {
