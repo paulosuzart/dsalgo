@@ -24,6 +24,43 @@ public class LinkedListReverse {
     }
   }
 
+  /**
+   * Given [1,2,3,4] will do ([2,3,4], [1]), then ([3,4], [2,1]) and so on until return [4,3,2,1]
+   * @param head
+   * @param tail
+   * @return
+   */
+  private static Node internalReverse(Node head, Node tail) {
+    if (head == null) {
+      return tail;
+    }
+
+    if (head.next == null) {
+      head.next = tail;
+      return head;
+    }
+
+    Node nextHead = head.next;
+    head.next = tail;
+    return internalReverse(nextHead, head);
+  }
+
+  /**
+   * This is the recursive solution implemented with the help of @buraktutanlar
+   *
+   * @return the reversed this
+   */
+  static Node recursiveReverse(Node head) {
+    Node nextHead = head.next;
+    head.next = null;
+    return internalReverse(nextHead, head);
+  }
+
+  /**
+   * Non recursive solution
+   *
+   * @return returns the reversed list
+   */
   static Node reverse(Node head) {
 
     // holds the nextNode for the nextNode head
