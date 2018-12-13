@@ -48,7 +48,6 @@ public class SimpleBinTree<T extends Comparable<T>> {
       } else if (comparison == 1) {
         current.right.ifPresent(toCompare::addFirst);
       } else {
-        current.left.ifPresent(toCompare::addFirst);
         current.right.ifPresent(toCompare::addFirst);
       }
     }

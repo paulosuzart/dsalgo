@@ -25,8 +25,8 @@ public class SimpleBinTreeTest {
     right.value = 5;
     tested.root.right = Optional.of(right);
 
-    Node<?> succ = tested.successor(3);
-    assertThat(succ.value, is(4));
+    Node<?> successor = tested.successor(3);
+    assertThat(successor.value, is(4));
     assertThat(tested.successor(4).value, is(5));
 
     assertNull(tested.successor(6));
