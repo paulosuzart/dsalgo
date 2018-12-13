@@ -7,7 +7,7 @@ package skiena.three;
  * The {@code enum Explanation} can be replaced by something else for testing purposes for sure.
  * But for study intention, it's fine.
  *
- * Question 3.1 - Given a string, validate if the parenthesis are balanced or not.
+ * Question 3-1 - Given a string, validate if the parenthesis are balanced or not.
  */
 public class ParenthesisBalancer {
 
