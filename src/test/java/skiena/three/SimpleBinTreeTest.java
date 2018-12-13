@@ -3,6 +3,7 @@ package skiena.three;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
+import java.util.Optional;
 import org.junit.Before;
 import org.junit.Test;
 import skiena.three.SimpleBinTree.Node;
@@ -16,11 +17,13 @@ public class SimpleBinTreeTest {
   public void successor() {
     tested.root = new Node<>();
     tested.root.value = 4;
-    tested.root.left = new Node<>();
-    tested.root.left.value = 3;
+    Node<Integer> left = new Node<>();
+    left.value = 3;
+    tested.root.left = Optional.of(left);
 
-    tested.root.right = new Node<>();
-    tested.root.right.value = 5;
+    Node<Integer> right = new Node<>();
+    right.value = 5;
+    tested.root.right = Optional.of(right);
 
     Node<?> succ = tested.successor(3);
     assertThat(succ.value, is(4));

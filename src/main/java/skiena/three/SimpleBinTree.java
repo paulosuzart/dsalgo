@@ -2,6 +2,7 @@ package skiena.three;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Optional;
 
 /**
  * 3-8. Design a data structure to support the following operations:
@@ -26,20 +27,12 @@ public class SimpleBinTree<T extends Comparable<T>> {
 
       if (comparison == -1) {
         successor = current;
-        if (current.left != null) {
-          toCompare.addFirst(current.left);
-        }
+        current.left.ifPresent(toCompare::addFirst);
       } else if (comparison == 1) {
-        if (current.right != null) {
-          toCompare.addFirst(current.left);
-        }
+        current.right.ifPresent(toCompare::addFirst);
       } else {
-        if (current.left != null) {
-          toCompare.addFirst(current.left);
-        }
-        if (current.right != null) {
-          toCompare.addFirst(current.right);
-        }
+        current.left.ifPresent(toCompare::addFirst);
+        current.right.ifPresent(toCompare::addFirst);
       }
     }
 
@@ -56,13 +49,9 @@ public class SimpleBinTree<T extends Comparable<T>> {
 
   static class Node<T> {
 
-    Node left;
-    Node right;
+    Optional<Node<T>> left = Optional.empty();
+    Optional<Node<T>> right = Optional.empty();
     T value;
-
-    boolean isLeaf() {
-      return left == null && right == null;
-    }
 
     @Override
     public String toString() {
