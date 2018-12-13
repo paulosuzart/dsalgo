@@ -26,21 +26,21 @@ public class LinkedListReverse {
 
   static Node reverse(Node head) {
 
-    // holds the current for the current head
-    Node current = head.next;
-    // Now we can set the current head next to null as it will become the latest item.
+    // holds the nextNode for the nextNode head
+    Node nextNode = head.next;
+    // Now we can set the nextNode head next to null as it will become the latest item.
     head.next = null;
     // While we don't reach the end of the list as it is
-    while (current != null) {
-      // temporarily hold reference to the current item next
-      Node temp = current.next;
-      // points the current reference to the previous head known head
+    while (nextNode != null) {
+      // temporarily hold reference to the nextNode item next
+      Node temp = nextNode.next;
+      // points the nextNode reference to the previous head known head
       // if it is the first run, we are basically doing n1 => n2 to become n1 <= n2
-      current.next = head;
-      // head now becomes the current.
-      head = current;
-      // current becomes the initially next item of the current.
-      current = temp;
+      nextNode.next = head;
+      // head now becomes the nextNode.
+      head = nextNode;
+      // nextNode becomes the initially next item of the nextNode.
+      nextNode = temp;
     }
 
     return head;
