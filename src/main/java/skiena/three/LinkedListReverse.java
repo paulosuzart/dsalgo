@@ -8,13 +8,20 @@ package skiena.three;
 public class LinkedListReverse {
 
   /**
-   * Represents a node of a list. The list holds nothing except the reference to the next item.
+   * Represents a node of a list.
    *
    * @return
    */
   static class Node {
 
+    volatile static int ids = 1;
+    int id = ids++;
     Node next;
+
+    @Override
+    public String toString() {
+      return String.format("n(%d)->%s", id, next);
+    }
   }
 
   static Node reverse(Node head) {
