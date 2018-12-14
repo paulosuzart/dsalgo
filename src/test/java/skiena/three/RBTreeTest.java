@@ -6,12 +6,12 @@ import static org.junit.Assert.*;
 import java.util.Optional;
 import org.junit.Before;
 import org.junit.Test;
-import skiena.three.SimpleBinTree.Node;
+import skiena.three.RBTree.Node;
 
 
-public class SimpleBinTreeTest {
+public class RBTreeTest {
 
-  SimpleBinTree<Integer> tested;
+  RBTree<Integer> tested;
 
   @Test
   public void successor() {
@@ -35,6 +35,6 @@ public class SimpleBinTreeTest {
 
   @Before
   public void init() {
-    tested = new SimpleBinTree<>();
+    tested = new RBTree<>();
   }
 }
